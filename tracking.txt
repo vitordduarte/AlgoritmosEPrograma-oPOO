@@ -1,0 +1,31 @@
+Algoritmos e Programação: Orientação a Objetos
+Trabalho Prático do Grau A
+Apresentação: Os trabalhos serão apresentados pelos grupos para a professora na aula do dia 10/10/2025. O tempo para apresentação por grupo será de aproximadamente 20 minutos. A ordem de apresentação será definida no dia da apresentação.
+Instruções para envio do trabalho: Enviar link para o repositório com o código fonte para a atividade aberta no Moodle até as 23h59min do dia 10/10/2025. Apenas um integrante do grupo envia os arquivos.
+Grupos: no máximo 3 integrantes.
+Álbum de Figurinhas Virtual
+Objetivo: desenvolver um programa que simule um aplicativo de álbum de figurinhas virtual, como por exemplo o apresentado na Figura 1. Implementar persistência de dados em arquivos texto tabulados.
+Figura 1: Exemplo de aplicativo de álbum de figurinhas virtual, da Copa 2022. A temática é apenas sugerida para este trabalho. Não é requisito o sistema possuir interface gráfica. Este trabalho é uma proposta simplificada inspirada em aplicativos existentes.
+Estrutura de Classes: a estrutura abaixo é uma proposta que serve como ponto de partida para o desenvolvimento do sistema.
+Adicione novos métodos e atributos caso seja necessário. 
+
+*Diagrama de classes
+
+O status da troca pode ser 0 (aguardando análise), 1 (aceita), 2 (recusada)
+O status da figurinha pode ser: 0 (na coleção), 1 (colada no álbum), 2 (disponível para troca)
+Descrição: Ao iniciar o programa, os dados devem ser carregados a partir dos arquivos “usuarios.csv”, “figurinhas.csv” e trocas.csv. Em seguida, deve mostrar o menu conforme descrição abaixo. 
+
+Código Opção Descrição
+1 Novo Álbum Ao escolher esta opção cria-se um novo usuário, cadastrando o nome de usuário e senha
+2 Acessar Álbum O usuário fornece seu nome de usuário e senha, o sistema verifica se existe um álbum correspondente e carrega as informações do álbum. As opções sobre o que pode ser feito ao acessar o álbum encontram-se na Tabela 2.
+3 Sair do Aplicativo Nesta opção, você deverá atualizar os arquivos com as alterações que houveram nos álbuns dos usuários
+Tabela 1 – Tela Inicial 
+
+Código Opção Descrição 1 Ver Álbum Para folhear o álbum, deverá ser apresentado para o usuário a possibilidade dele avançar ou recuar de página, a partir na página 1 (Capa). Outra opção será voltar ao menu anterior. Cada página do álbum representa uma categoria de figurinhas (por exemplo, uma seleção) e possui até 10 figurinhas, que são numeradas sequencialmente (uma página pode ter das figurinhas 1 a 10, 10 a 20 etc. Ao mostrar uma página do álbum, deve-se listar as figurinhas da seguinte maneira:  • Se a figurinha daquele número já foi colada, deve-se listar as informações da Figurinha (por exemplo, nome do Jogador e alguma informação sobre ele) • Se o usuário não colou a figurinha mas já possui ela, deve-se aparecer o texto “COLAR” – Para fazer isso, o jogador deve acessar a opção Consultar minhas figurinhas • Se o usuário não possui aquela figurinha, deve aparecer uma mensagem indicando que ele ainda não a possui (como um X ou alguma outra marcação) 2 Gerenciar a coleção Ao escolher esta opção, o usuário pode ter acesso às figurinhas que ele já possui (coleção). Uma sugestão de como visualizar é a partir de uma matriz por página, que sinaliza a quantidade de figurinhas que ele possui com os seus respectivos números. Nesta listagem, deverão ser mostradas apenas as figurinhas que não estão coladas no álbum. Além disso, deverá aparecer as opções descritas na Tabela 3, além da opção voltar ao menu anterior. 3 Abrir pacote de Figurinhas Ao escolher esta opção, assume-se que o jogador está comprando/obtendo mais um pacote contendo 3 novas figurinhas. Não consideraremos as operações de compra, apenas serão sorteados os números de 3 novas figurinhas e elas deverão ser reveladas ao usuário (por mensagem) e adicionadas a coleção de figurinhas. 
+Após a abertura, o sistema deverá obrigatoriamente voltar ao menu anterior. 4 Voltar ao menu Anterior  
+Tabela 2 – Tela Gerenciar Álbum 
+
+
+Código Opção Descrição
+1 Colar Figurinha Ao escolher esta opção, o usuário deve fornecer o número da figurinha a ser colada. Se a figurinha existir na coleção e ainda não estiver colada no álbum, deverá se alterar o status do álbum e da coleção de maneira que a operação seja completada. Após a abertura, o sistema deverá obrigatoriamente voltar ao menu anterior. 2 Disponibilizar para troca Ao escolher esta opção, o usuário deve fornecer o número da figurinha a ser disponibilizada. O status da figurinha deve mudar para disponível para troca 3 Propor troca de figurinhas Ao escolher esta opção, o usuário poderá consultar figurinhas à disposição para troca de outros usuários e propor uma troca. Para isso, deverá ser mostrada a listagem dos usuários, e o usuário deverá escolher um (recomenda-se nesta listagem já mostrar as figurinhas disponíveis).  O usuário deverá então selecionar o parceiro de troca, o número da figurinha que deseja e o número da figurinha pela qual gostaria de trocar. Neste momento, cria-se uma solicitação de troca para o parceiro de troca, que poderá ou não aceitar a troca pela opção Revisar solicitação de trocas  4 Revisar solicitações de troca Ao escolher esta opção, o usuário pode acessar as solicitações de troca que foram feitas para ele. Ele deverá selecionar uma solicitação e aceitala ou recusá-la. Ao recusar, aquela solicitação de troca não aparece mais para o usuário. Ao aceitar, são feitas as alterações necessárias nos álbuns do usuário e do solicitante. 5 Voltar ao menu Anterior 
+Tabela 3 – Tela Gerenciar Coleção 
