@@ -1,0 +1,13 @@
+numero,nome,descricao,pagina
+1,Capa,Capa do álbum,0
+2,Mascote,Mascote oficial,1
+3,Estádio A,Foto do Estádio A,1
+4,Time Azul,Escudo do Time Azul,2
+5,Jogador 10,Craque camisa 10,2
+6,Time Verde,Escudo do Time Verde,2
+7,Jogador 7,Atacante veloz,3
+8,Jogador 1,Goleiro titular,3
+9,Estádio B,Foto do Estádio B,3
+10,Seleção A,Foto oficial Seleção A,4
+11,Seleção B,Foto oficial Seleção B,4
+12,Troféu,Troféu do campeonato,4
