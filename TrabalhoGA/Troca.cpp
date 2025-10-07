@@ -1,32 +1,27 @@
-#include <iostream>
-#include <string>
+#include "troca.h"
 
-using namespace std;
+Troca::Troca()
+{
+    nomeProponente = "";
+    figurinhaRequerida = 0;
+    figurinhaDisponivel = 0; 
+}
 
-class Troca{
+Troca::Troca()
+{
+    this->nomeProponente = nomeProponente;
+    this->figurinhaRequerida = figurinhaRequerida;
+    this->figurinhaDisponivel = figurinhaDisponivel; 
+}
 
-    //Atributos - privado
-    private:
-        string nomeProponente;
-        int figurinhaRequerida;
-        int figurinhaDisponivel;
-        int status;
+Troca::~Tro
 
-    public:
+//criar uma logica para trocar a figurinha, é sim ou não
+//O status da troca pode ser 0 (aguardando análise), 
+//1 (aceita), 2 (recusada)
+bool Troca::aceitar()
+{
 
-        // construto padrão
-        Troca();
-
-        //personalizado
-        Troca
-        (
-            string nomeProponente,
-            int figurinhaRequerida,
-            int figurinhaDisponivel
-        );
-
-        //Destrutor
-        ~Troca();
-
-        bool aceitar();
 };
+
+
