@@ -1,18 +1,22 @@
 #ifndef PAGINA_H
 #define PAGINA_H
+
 #include <iostream>
 #include <string>
+#include "Figurinha.h"
+
 using namespace std;
 
 class Pagina {
     // Atributos
 private:
-    Figurinha[] figurinhas;
+    Figurinha figurinhas[100];
     string titulo;
-    minNro, maxNro int;
+    int minNro;
+    int maxNro ;
 
     // Métodos
 public:
-    type method(type);
+    //type method(type);
 };
 #endif

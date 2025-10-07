@@ -1,7 +1,10 @@
 #ifndef USUARIO_H
 #define USUARIO_H
+
 #include <iostream>
 #include <string>
+#include "Album.h"
+
 using namespace std;
 
 class Usuario {
@@ -15,11 +18,18 @@ private:
 public:
     Usuario(); // construtor padrão
 
+    Usuario
+    (
+        string nomeDeUsuario,
+        string senha,
+        Album album
+    );
+
     // Getters
     string getNomeDeUsuario();
     Album getAlbum();
 
-    cadastrar (string, string);
+    void cadastrar (string nomeDeUsuario, string senha);
     bool verificarLogin (string, string);
 };
 #endif

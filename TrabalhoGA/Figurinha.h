@@ -1,7 +1,9 @@
 #ifndef FIGURINHA_H
 #define FIGURINHA_H
+
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 class Figurinha {
@@ -15,6 +17,6 @@ private:
 
     // Métodos
 public:
-    type method(type);
+//    type method(type);
 };
 #endif
