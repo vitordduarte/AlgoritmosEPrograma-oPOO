@@ -36,3 +36,70 @@ Código Opção Descrição
 4 Revisar solicitações de troca Ao escolher esta opção, o usuário pode acessar as solicitações de troca que foram feitas para ele. Ele deverá selecionar uma solicitação e aceitala ou recusá-la. Ao recusar, aquela solicitação de troca não aparece mais para o usuário. Ao aceitar, são feitas as alterações necessárias nos álbuns do usuário e do solicitante.
 5 Voltar ao menu Anterior 
 Tabela 3 – Tela Gerenciar Coleção 
+
+Chat:
+
+Aqui vai uma ordem prática focada no fluxo do app, do primeiro uso até trocas entre usuários. Pense em “terminar um caminho do menu por vez”.
+
+Base do projeto
+* Criar repositório, estrutura de pastas, classe App com main.
+* Modelos e enums: Usuario, Album, Pagina, Figurinha, Troca; StatusFigurinha e StatusTroca.
+* MenuService para imprimir menus e ler entradas.
+
+Persistência mínima
+* CSVUtils para ler e salvar usuários, figurinhas, trocas.
+* Semear 2 usuários e um conjunto pequeno de figurinhas para teste.
+
+Tela Inicial funcionando
+* Opção 1 Novo Álbum: cadastrar usuário e criar album vazio.
+* Opção 2 Acessar Álbum: login simples.
+* Opção 3 Sair: salvar todos os CSV.
+Check: consigo entrar, criar conta, sair e os arquivos refletem isso.
+
+Mostrar o Álbum
+* Implementar “Gerenciar Álbum” → “Ver Álbum”.
+* Páginas com posições mostrando: colada, disponível para colar, ausente.
+Check: navegação por páginas ok, sem modificar estado.
+
+Abrir pacote de figurinhas
+* Em “Gerenciar Álbum” → “Abrir pacote”: sortear 3 números válidos e adicionar à coleção do usuário.
+* Evitar duplicar coladas. Repetidas vão para coleção como não coladas.
+Check: após abrir pacote, “Ver Álbum” reflete novas disponíveis.
+
+Submenu “Gerenciar a coleção”
+Crie o submenu e implemente cada ação nesta ordem:
+6.1) Colar figurinha
+* Entrada por número. Se está na coleção e não colada, muda estado para colada no álbum.
+Check: a posição no álbum muda para colada e some da lista de “para colar”.
+6.2) Disponibilizar para troca
+* Mudar status da figurinha não colada para disponível para troca.
+Check: figurinha aparece na lista de trocáveis do usuário.
+6.3) Propor troca
+* Listar outros usuários e suas disponíveis.
+* Selecionar “quero X e ofereço Y” e criar Troca com status aguardando.
+Check: troca aparece na caixa de pendentes do destinatário.
+6.4) Revisar solicitações de troca
+* Aceitar atualiza coleções e álbum dos dois usuários.
+* Recusar somente marca status.
+Check: aceitar move as figurinhas corretas e preserva estados colada ou não colada.
+
+Regras e validações críticas
+* Impedir colar duas vezes a mesma figurinha.
+* Ao aceitar troca, revalidar que X e Y ainda estão disponíveis e não coladas.
+* Prevenir login duplicado.
+* Tratar entradas inválidas nos menus e repetir a opção.
+
+Salvamento confiável
+* Garantir salvar após ações sensíveis ou ao sair.
+* Testar fechar e reabrir o app mantendo estado.
+
+Testes guiados por fluxo
+* Roteiro 1: criar usuário → abrir pacote → colar 1 figurinha → sair e voltar.
+* Roteiro 2: disponibilizar duas figurinhas → propor troca para outro usuário → aceitar no outro login → verificar estados.
+* Roteiro 3: casos de erro comuns como tentar colar já colada, aceitar troca sem possuir mais a figurinha.
+
+Polimento final
+* Mensagens claras, nomes consistentes, tratamento de listas grandes por paginação simples.
+* README com como rodar, formato dos CSV e roteiro de demonstração.
+
+Se quiser, já te faço um checklist de tarefas com caixas de seleção por arquivo e por menu para você ir marcando o progresso.
