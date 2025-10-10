@@ -1,44 +1,27 @@
-//#ifndef USUARIO_H
-//#define USUARIO_H
-
 #include "Usuario.h"
-//#include "Album.h"
 
-
-Usuario::Usuario()
-{
-    nomeDeUsuario = "";
-    senha = "";
-    album;
+Usuario::Usuario() {
+    this->nome = "";
+    this->senha = "";
 }
 
-/*
-Usuario::Usuario (string nomeDeUsuario,  string senha)
-{
-    this->nomeDeUsuario = nomeDeUsuario;
+Usuario::Usuario(string nome, string senha) {
+    this->nome = nome;
     this->senha = senha;
-   // this->album = album;
-}*/
-
-Usuario::~Usuario(){}
-
-
-string Usuario::getNomeDeUsuario(){
-    return nomeDeUsuario;
 }
 
-//Estou com dúvidas se é assim mesmo
-void Album getAlbum()
-{
-    return album;
+Usuario::~Usuario() {
+    // nada a liberar (sem new/delete)
 }
 
-//Cadastro de usuario e senha
-//Provavelmente isso será armazenado em algum lugar, tem que ver onde 
-void cadastrar (string nomeDeUsuario,  string senha)
-{
-    //Provavelmente isso será armazenado em algum lugar, tem que ver onde 
-
+string Usuario::getNome() {
+    return nome;
 }
 
-//#endif
+string Usuario::getSenha() {
+    return senha;
+}
+
+Album* Usuario::getAlbum() {
+    return &album;
+}

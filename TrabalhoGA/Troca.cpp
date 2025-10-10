@@ -1,27 +1,45 @@
-#include "troca.h"
+#include "Troca.h"
 
-Troca::Troca()
-{
-    nomeProponente = "";
-    figurinhaRequerida = 0;
-    figurinhaDisponivel = 0; 
+Troca::Troca() {
+    this->proponente = "";
+    this->destinatario = "";
+    this->figRequerida = 0;
+    this->figOferecida = 0;
+    this->status = 0;
 }
 
-Troca::Troca()
-{
-    this->nomeProponente = nomeProponente;
-    this->figurinhaRequerida = figurinhaRequerida;
-    this->figurinhaDisponivel = figurinhaDisponivel; 
+Troca::Troca(string prop, string dest, int req, int of) {
+    this->proponente = prop;
+    this->destinatario = dest;
+    this->figRequerida = req;
+    this->figOferecida = of;
+    this->status = 0;
 }
 
-Troca::~Tro
+string Troca::getProponente() {
+    return proponente;
+}
 
-//criar uma logica para trocar a figurinha, é sim ou não
-//O status da troca pode ser 0 (aguardando análise), 
-//1 (aceita), 2 (recusada)
-bool Troca::aceitar()
-{
+string Troca::getDestinatario() {
+    return destinatario;
+}
 
-};
+int Troca::getFigRequerida() {
+    return figRequerida;
+}
 
+int Troca::getFigOferecida() {
+    return figOferecida;
+}
 
+int Troca::getStatus() {
+    return status;
+}
+
+void Troca::aceitar() {
+    status = 1;
+}
+
+void Troca::setStatus(int novoStatus) {
+    status = novoStatus;
+}

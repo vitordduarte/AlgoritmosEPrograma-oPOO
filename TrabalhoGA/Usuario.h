@@ -1,35 +1,24 @@
 #ifndef USUARIO_H
 #define USUARIO_H
 
-#include <iostream>
 #include <string>
 #include "Album.h"
-
 using namespace std;
 
 class Usuario {
-    // Atributos
 private:
-    string nomeDeUsuario;
+    string nome;
     string senha;
-    Album album;
+    Album album; // membro direto (sem ponteiro)
 
-    // Métodos
 public:
-    Usuario(); // construtor padrão
+    Usuario();
+    Usuario(string nome, string senha);
+    ~Usuario();
 
-    Usuario
-    (
-        string nomeDeUsuario,
-        string senha,
-        Album album
-    );
-
-    // Getters
-    string getNomeDeUsuario();
-    Album getAlbum();
-
-    void cadastrar (string nomeDeUsuario, string senha);
-    bool verificarLogin (string, string);
+    string getNome();
+    string getSenha();
+    Album* getAlbum();
 };
+
 #endif
