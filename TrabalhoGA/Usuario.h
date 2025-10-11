@@ -5,11 +5,17 @@
 #include "Album.h"
 using namespace std;
 
+/*
+    Classe Usuario
+    ---------------
+    - Mantém nome e senha.
+  
+*/
 class Usuario {
 private:
     string nome;
     string senha;
-    Album album; // membro direto (sem ponteiro)
+    Album album;
 
 public:
     Usuario();

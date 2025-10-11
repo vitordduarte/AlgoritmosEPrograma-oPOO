@@ -10,18 +10,17 @@ Usuario::Usuario(string nome, string senha) {
     this->senha = senha;
 }
 
-Usuario::~Usuario() {
-    // nada a liberar (sem new/delete)
-}
+Usuario::~Usuario() {}
 
-string Usuario::getNome() {
+string Usuario::getNome() 
+{
     return nome;
 }
-
-string Usuario::getSenha() {
+string Usuario::getSenha() 
+{
     return senha;
 }
-
-Album* Usuario::getAlbum() {
+Album* Usuario::getAlbum()
+{
     return &album;
 }

@@ -6,7 +6,7 @@ Figurinha::Figurinha() {
     this->numero = 0;
     this->nome = "";
     this->conteudo = "";
-    this->status = 0;
+    this->status = -1; // começa faltando
     this->nroPagina = 0;
 }
 
@@ -18,30 +18,32 @@ Figurinha::Figurinha(int numero, string nome, string conteudo, int nroPagina, in
     this->nroPagina = nroPagina;
 }
 
-int Figurinha::getNumero() {
+int Figurinha::getNumero() 
+{ 
     return numero;
 }
-
-string Figurinha::getNome() {
+string Figurinha::getNome() 
+{ 
     return nome;
 }
-
-string Figurinha::getConteudo() {
-    return conteudo;
+string Figurinha::getConteudo() 
+{
+     return conteudo;
 }
-
-int Figurinha::getStatus() {
+int Figurinha::getStatus() 
+{ 
     return status;
 }
-
-int Figurinha::getNroPagina() {
+int Figurinha::getNroPagina() 
+{
     return nroPagina;
 }
-
-void Figurinha::setStatus(int novoStatus) {
+void Figurinha::setStatus(int novoStatus)
+{
     status = novoStatus;
 }
 
+    // Cola somente se a figurinha já pertence ao usuário e ainda não foi colada
 void Figurinha::colar() {
     if (status == 0) {
         status = 1;
@@ -49,14 +51,18 @@ void Figurinha::colar() {
 }
 
 void Figurinha::disponibilizarParaTroca() {
+    // Disponibiliza somente se a figurinha já pertence ao usuário e ainda não foi colada
     if (status == 0) {
         status = 2;
     }
 }
 
+// Para ajudar no processo de visualizar da coleção
 void Figurinha::resumo() {
     cout << "Figurinha " << numero << " - " << nome << " (";
-    if (status == 1) {
+    if (status < 0) {
+        cout << "Faltando";
+    } else if (status == 1) {
         cout << "Colada";
     } else if (status == 2) {
         cout << "Disponível para troca";

@@ -14,18 +14,29 @@ Pagina::Pagina(string titulo, int minNro, int maxNro) {
     this->maxNro = maxNro;
 }
 
-string Pagina::getTitulo() {
+string Pagina::getTitulo() 
+{
     return titulo;
 }
-
-int Pagina::getMinNro() {
+int Pagina::getMinNro() 
+{
     return minNro;
 }
-
-int Pagina::getMaxNro() {
+int Pagina::getMaxNro() 
+{
     return maxNro;
 }
 
+
+    /*
+        Verifica o status de cada figurinha e dá um retorno
+        - Percorre os números da faixa [min..max].
+        - Para cada número:
+            1 -> imprime "COLADA" e o nome
+            0 -> imprime "COLAR (você tem, mas não colada)"
+            2 -> imprime "DISPONÍVEL PARA TROCA"
+           <0 -> imprime "FALTANDO"
+    */
 void Pagina::mostrar(Figurinha* figurinhas, int totalFigurinhas) {
     cout << "=== Página: " << titulo << " (" << minNro << " a " << maxNro << ") ===\n";
     for (int n = minNro; n <= maxNro; n = n + 1) {
@@ -37,8 +48,10 @@ void Pagina::mostrar(Figurinha* figurinhas, int totalFigurinhas) {
                 cout << f.getNome() << " (COLADA)\n";
             } else if (status == 0) {
                 cout << "COLAR (você tem, mas não colada)\n";
-            } else {
+            } else if (status == 2) {
                 cout << "DISPONÍVEL PARA TROCA\n";
+            } else {
+                cout << "FALTANDO\n";
             }
         }
     }

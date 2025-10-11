@@ -4,7 +4,12 @@
 #include <string>
 using namespace std;
 
-// status: 0 = aguardando, 1 = aceito, outros valores tratados como recusado (2)
+/*
+    Classe Troca
+    -------------
+    Representa uma solicitação de troca entre dois usuários.
+    status: 0 = aguardando, 1 = aceito, qualquer outro = recusado (2).
+*/
 class Troca {
 private:
     string proponente;
@@ -23,8 +28,9 @@ public:
     int getFigOferecida();
     int getStatus();
 
+
     void aceitar();
-    void setStatus(int novoStatus); // usado para marcar recusada (2) quando necessário
+    void setStatus(int novoStatus);
 };
 
 #endif
