@@ -18,5 +18,9 @@ void Eletronico::exibirInfo() const {
     cout << "  (Eletrônico) Tensao: " << tensao << "V, Garantia: " << garantiaMeses << " meses\n";
 }
 
-int Eletronico::getTensao() const { return tensao; }
-int Eletronico::getGarantia() const { return garantiaMeses; }
+int Eletronico::getTensao() const {
+    return tensao;
+}
+int Eletronico::getGarantia() const {
+    return garantiaMeses;
+}
