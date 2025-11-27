@@ -10,7 +10,7 @@ Eletronico::Eletronico(const string &n, float p, int e, float w, int t, int g)
 Eletronico::~Eletronico() {}
 
 float Eletronico::calcularFrete() const {
-    return 10.0 + peso * 2; // retornando 10 reais + o peso multiplicado por 2
+    return 10.0 + peso * 2; // retornando 10 reais + o peso multiplicado por 2, assim da p mudar o frete conforme o tipo do produto
 }
 
 void Eletronico::exibirInfo() const {
