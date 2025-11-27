@@ -14,7 +14,7 @@ double Vestuario::calcularFrete() const {
 
 void Vestuario::exibirInfo() const {
     Produto::exibirInfo();
-    std::cout << "  (Vestuário) Tamanho: " << tamanho << ", Material: " << material << "\n";
+    cout << "  (Vestuário) Tamanho: " << tamanho << ", Material: " << material << "\n";
 }
 
 string Vestuario::getTamanho() const {
