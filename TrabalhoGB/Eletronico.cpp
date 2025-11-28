@@ -4,8 +4,8 @@
 
 using namespace std;
 
-Eletronico::Eletronico(const string &n, float p, int e, float w, int t, int g)
-    : Produto(n,p,e,w), tensao(t), garantiaMeses(g) {}
+Eletronico::Eletronico(const string &nome1, float preco1, int estoque1, float peso1, int tensao1, int garantiaMeses1)
+    : Produto(nome1,preco1,estoque1,peso1), tensao(tensao1), garantiaMeses(garantiaMeses1) {}
 
 Eletronico::~Eletronico() {}
 
