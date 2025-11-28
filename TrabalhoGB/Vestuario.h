@@ -9,7 +9,7 @@ protected:
     string tamanho;
     string material;
 public:
-    Vestuario(const std::string &n="", float p=0.0, int e=0, float w=0.0, const string &t="", const string &m="");
+    Vestuario(const string &nome1="", float preco1=0.0, int estoque1=0, float peso1=0.0, const string &tamanho1="", const string &material1="");
     virtual ~Vestuario();
 
     virtual float calcularFrete() const override;
