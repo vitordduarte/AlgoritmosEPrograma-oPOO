@@ -1,10 +1,10 @@
-#include "Produto.h"
+m#include "Produto.h"
 #include <iostream>
 
 using namespace std;
 
-Produto::Produto(const string &n, float p, int e, float w)
-    : nome(n), preco(p), estoque(e), peso(w) {}
+Produto::Produto(const string &nome1, float preco1, int estoque1, float peso1)
+    : nome(nome1), preco(preco1), estoque(estoque1), peso(peso1) {}
 
 Produto::~Produto() {}
 
