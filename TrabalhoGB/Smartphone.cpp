@@ -4,8 +4,8 @@
 
 using namespace std;
 
-Smartphone::Smartphone(const string &n, float p, int e, float w, int t, int g, int armaz, string &marca) // aqui ele herda de eletronico que herda de produto
-    : Eletronico(n,p,e,w,t,g), armazenamento(armaz), marca(marca) {}
+Smartphone::Smartphone(const string &nome1, float preco1, int estoque1, float peso1, int tensao1, int garantiaMeses1, int armazenamento1, string &marca1) // aqui ele herda de eletronico que herda de produto
+    : Eletronico(nome1,preco1,estoque1,peso1,tensao1,garantiaMeses1), armazenamento(armazenamento1), marca(marca1) {}
 
 Smartphone::~Smartphone() {}
 
