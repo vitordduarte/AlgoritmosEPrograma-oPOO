@@ -10,12 +10,12 @@ protected:
     string dataValidade;
     string tipoAlimento;
 public:
-    Alimento(const string &n="", float p=0.0, int e=0, float w=0.0, const string &d="", const string &t="");
+    Alimento(const string &nome1="", float preco1=0.0, int estoque1=0, float peso1=0.0, const string &dataValidade1="", const string &tipoAlimento1="");
     virtual ~Alimento();
 
     virtual float calcularFrete() const override;
     virtual void exibirInfo() const override;
 
-    std::string getDataValidade() const;
+    string getDataValidade() const;
 };
 #endif
