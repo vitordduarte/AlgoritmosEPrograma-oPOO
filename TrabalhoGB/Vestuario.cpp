@@ -3,8 +3,8 @@
 
 using namespace std;
 
-Vestuario::Vestuario(const string &n, float p, int e, float w, const string &t, const string &m)
-    : Produto(n,p,e,w), tamanho(t), material(m) {}
+Vestuario::Vestuario(const string &nome1, float preco1, int estoque1, float peso1, const string &tamanho1, const string &material1)
+    : Produto(nome1,preco1,estoque1,peso1), tamanho(tamanho1), material(material1) {}
 
 Vestuario::~Vestuario() {}
 
