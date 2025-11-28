@@ -9,7 +9,9 @@ class Smartphone : public Eletronico {
     int armazenamento;
     string marca;
 public:
-    Smartphone(const string &nome1="", float preco1=0.0, int estoque1=0, float peso1=0.0, int tensao1=0, int garantiaMeses1=0, int armazenamento1=0, string &marca1="");
+    Smartphone(const string &nome1 = "", float preco1 = 0.0, int estoque1 = 0, float peso1 = 0.0,
+               int tensao1 = 0, int garantiaMeses1 = 0, int armazenamento1 = 0,
+               const string &marca1 = "");
     virtual ~Smartphone();
 
     string getEspecificacoes() const;

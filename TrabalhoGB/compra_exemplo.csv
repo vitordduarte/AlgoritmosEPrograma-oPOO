@@ -1,0 +1,6 @@
+tipo;nome;preco;estoque;peso;dataValidade;tipoAlimento;tensao;garantiaMeses;tamanho;material;estampa;armazenamentoGB;marca
+ALIMENTO;Arroz 5kg;25.90;10;5.0;31/12/2025;Grao;;;;
+ELETRONICO;TV 50 polegadas;2500.00;5;12.0;;;110;12;;;;;
+VESTUARIO;Calca Jeans;150.00;20;0.5;;;;;M;Jeans;;;
+CAMISETA;Camiseta Preta;59.90;30;0.3;;;;;G;Algodao;Logo da Loja;;
+SMARTPHONE;Smartphone X;1999.00;15;0.4;;;;220;12;;;128;MarcaX

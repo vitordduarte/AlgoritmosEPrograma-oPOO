@@ -1,4 +1,4 @@
-m#include "Produto.h"
+#include "Produto.h"
 #include <iostream>
 
 using namespace std;
@@ -9,12 +9,15 @@ Produto::Produto(const string &nome1, float preco1, int estoque1, float peso1)
 Produto::~Produto() {}
 
 float Produto::getPreco() const {
-  return preco;
+    return preco;
 }
-string Produto::getNome() const
-{ return nome;
+
+string Produto::getNome() const {
+    return nome;
 }
 
 void Produto::exibirInfo() const {
-    cout << nome << " | R$ " << preco << " | Estoque: " << estoque << " | Peso: " << peso << "kg\n";
+    cout << nome << " | R$ " << preco
+         << " | Estoque: " << estoque
+         << " | Peso: " << peso << "kg\n";
 }
