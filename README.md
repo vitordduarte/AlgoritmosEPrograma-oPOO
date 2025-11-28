@@ -14,4 +14,6 @@ Repositório com os projetos desenvolvidos para a Atividade Acadêmica **Algorit
 | `Lista 2` | C++         | Exercícios de modelagem e implementação com foco em encapsulamento e classes compostas (ex.: Anamnese, Ficha de Leitura, Album de Figurinhas). |
 | `Lista 3`      | C++   | Aplicações de alocação dinâmica de memória para tipos primitivos e objetos, incluindo simulações com pontos, círculos e estacionamento. |
 | `Lista 4`      | C++   | Exercício sobre persistência de dados e manipulação de arquivos `.csv`, utilizando serialização e desserialização de objetos da classe Mago. |
-| `Trabalho Grau A`      | C++   | Desenvolvimento completo de um álbum de figurinhas virtual com persistência em arquivos, cadastro de usuários, controle de trocas e gerenciamento de coleção. Projeto final da disciplina. link para o trabalho https://github.com/vitordduarte/AlgoritmosEPrograma-oPOO/tree/main/TrabalhoGA |
+| `Lista 5`      | C++   | Exercícios sobre |
+| `Trabalho Grau A`      | C++   | Desenvolvimento completo de um álbum de figurinhas virtual com persistência em arquivos, cadastro de usuários, controle de trocas e gerenciamento de coleção. Projeto do Grau A da disciplina. Link para o trabalho https://github.com/vitordduarte/AlgoritmosEPrograma-oPOO/tree/main/TrabalhoGA |
+| `Trabalho Grau B`      | C++   | Desenvolvimento de ... Projeto do Grau B da disciplina. Link para o trabalho ... |
