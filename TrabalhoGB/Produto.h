@@ -5,7 +5,7 @@ using namespace std;
 
 class Produto {
 protected:
-    std::string nome;
+    string nome;
     float preco;
     int estoque;
     float peso;
