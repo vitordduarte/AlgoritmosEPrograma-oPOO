@@ -10,7 +10,7 @@ protected:
     int estoque;
     float peso;
 public:
-    Produto(const string &n="", float p=0.0, int e=0, float w=0.0);
+    Produto(const string &nome1="", float preco1=0.0, int estoque1=0, float peso1=0.0);
     virtual ~Produto();
     virtual float calcularFrete() const = 0;
     virtual void exibirInfo() const;
