@@ -3,8 +3,8 @@
 
 using namespace std;
 
-Alimento::Alimento(const string &n, float p, int e, float w, const string &d, const string &t)
-    : Produto(n,p,e,w), dataValidade(d), tipoAlimento(t) {}
+Alimento::Alimento(const string &nome1, float preco1, int estoque1, float peso1, const string &dataValidade1, const string &tipoAlimento1)
+    : Produto(nome1,preco1,estoque1,peso1), dataValidade(dataValidade1), tipoAlimento(tipoAlimento1) {}
 
 Alimento::~Alimento() {}
 
