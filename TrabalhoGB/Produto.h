@@ -15,5 +15,6 @@ public:
     virtual float calcularFrete() const = 0;
     virtual void exibirInfo() const;
     float getPreco() const;
+    string getNome() const;
 };
 #endif
