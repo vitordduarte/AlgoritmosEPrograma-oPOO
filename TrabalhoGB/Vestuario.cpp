@@ -8,7 +8,7 @@ Vestuario::Vestuario(const string &nome1, float preco1, int estoque1, float peso
 
 Vestuario::~Vestuario() {}
 
-double Vestuario::calcularFrete() const {
+float Vestuario::calcularFrete() const {
     return 5.0 + peso * 2.0;
 }
 
